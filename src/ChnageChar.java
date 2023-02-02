@@ -10,9 +10,6 @@ public class ChnageChar {
         if(isMaj(entrer)){
             System.out.print(entrer.toUpperCase());
         }
-
-
-
     }
     private static boolean isMaj (String chaine) {
         for(int i = 0; i<chaine.length(); i++){

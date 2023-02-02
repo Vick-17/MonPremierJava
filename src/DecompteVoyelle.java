@@ -7,6 +7,7 @@ public class DecompteVoyelle {
         String chaine = scan.nextLine();
         int voyelles = 0;
 
+
         for(int i = 0; i<chaine.length(); i++){
             if(isVoyelles(chaine.charAt(i))){
                 voyelles++;
