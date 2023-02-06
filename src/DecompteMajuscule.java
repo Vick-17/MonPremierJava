@@ -12,6 +12,7 @@ public class DecompteMajuscule {
         System.out.print(maj);
 
     }
+
     private static int nbrDeMaj(String chaine) {
         int compteur=0;
         for(int i = 0; i<chaine.length(); i++){

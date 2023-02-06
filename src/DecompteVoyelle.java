@@ -15,6 +15,10 @@ public class DecompteVoyelle {
         }
         System.out.print("Nombre de voyelles : "+ voyelles);
     }
+
+    /**
+     * Vérifie si le caractere passer est une voyelle
+     */
     public static boolean isVoyelles(char verifVoy){
         if(verifVoy == 'a' || verifVoy== 'e' || verifVoy== 'i' || verifVoy== 'o' || verifVoy== 'u' || verifVoy== 'y'){
             return true;

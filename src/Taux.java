@@ -1,14 +1,5 @@
 import java.util.Scanner;
-
-/**
- * The type Taux.
- */
 public class Taux {
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
     public static void main(String[] args) {
         System.out.println("Célibataire");
         Scanner scan = new Scanner(System.in);
