@@ -7,25 +7,30 @@ public class VerifCarte {
         Scanner scan = new Scanner(System.in);
         System.out.println("Mettre votre carte de credit : ");
         long carte = scan.nextLong();
-        int[] tabTrier = ennumNombre(carte);
-        System.out.println(Arrays.toString(tabTrier));
+        boolean carteValid = false;
+        if(isCardIsValid(String.valueOf(carte))){
+            carteValid = true;
+            System.out.println("Votre carte est valide");
+        } else {
+            System.out.println("Votre carte n'est pas valide");
+        }
 
     }
 
-    public static int[] ennumNombre(long number) {
-        ArrayList<Integer> digits = new ArrayList<>();
-
-        while (number > 0) {
-            int digit = (int) (number % 10);
-            digits.add(digit);
-            number /= 10;
+    public static boolean isCardIsValid(String cardNumber) {
+        int sum = 0;
+        boolean alternate = false;
+        for (int i = cardNumber.length() - 1; i >= 0; i--) {
+            int n = Integer.parseInt(cardNumber.substring(i, i + 1));
+            if (alternate) {
+                n *= 2;
+                if (n > 9) {
+                    n = (n % 10) + 1;
+                }
+            }
+            sum += n;
+            alternate = !alternate;
         }
-
-        int[] tabTrier = new int[digits.size()];
-        for (int i = 0; i < tabTrier.length; i++) {
-            tabTrier[i] = digits.get(tabTrier.length - i - 1);
-        }
-
-        return tabTrier;
+        return (sum % 10 == 0);
     }
 }

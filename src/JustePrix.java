@@ -1,15 +1,6 @@
 import java.util.Scanner;
 
-/**
- * The type Juste prix.
- */
 public class JustePrix {
-
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
     public static void main(String[] args) {
         int prix = (int) (Math.random() * 100);
         System.out.println(prix);
